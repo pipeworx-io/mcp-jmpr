@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/jmpr",
   "title": "Jmpr",
   "description": "JMPR — the Joint FAO/WHO Meeting on Pesticide Residues.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/jmpr",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-jmpr",

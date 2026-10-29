@@ -1,0 +1,42 @@
+[
+  {
+    "name": "jmpr_search",
+    "description": "Find pesticides evaluated by the FAO/WHO Joint Meeting on Pesticide Residues (JMPR) by name or partial name. Returns matching pesticide names, which are the identifier used to fetch a full safety evaluation. Use when you have a pesticide name and want its toxicological assessment.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Pesticide name or fragment, e.g. \"chlorpyrifos\" or \"pyrethr\"."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "jmpr_chemical",
+    "description": "Get the full JMPR safety evaluation for one pesticide: its Acceptable Daily Intake (ADI) and Acute Reference Dose (ARfD) in mg/kg body weight, the year each was set, the meeting's conclusions, its CAS number, chemical class and pesticide use type, plus links to the JMPR reports and monographs. Use to answer how much of a pesticide is considered safe to consume daily, or why a value was withdrawn or never set.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "pesticide": {
+          "type": "string",
+          "description": "Pesticide name as JMPR spells it, e.g. \"CHLORPYRIFOS\". Case-insensitive; get it from jmpr_search."
+        }
+      },
+      "required": [
+        "pesticide"
+      ]
+    }
+  },
+  {
+    "name": "jmpr_list_pesticides",
+    "description": "List every pesticide the FAO/WHO Joint Meeting on Pesticide Residues has evaluated. Use to survey coverage or to check whether a substance has ever been assessed at all — absence means JMPR has not evaluated it, which is different from it having no safe level.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {}
+    }
+  }
+]
